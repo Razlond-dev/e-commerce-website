@@ -6,7 +6,7 @@ const getProducts = async ()=> {
 }
 
 const displayProducts = (products, center) => {
-  let display = products.map(({title, image, price}) => `<div class="product">
+  let display = products.map(({title, image, price}) => `<div class="product ">
   <div class="product-header">
     <img src="images/product1.png" alt="">
   </div>
@@ -58,10 +58,9 @@ if(catContainer) {
     })
     target.classList.add('active')
     const menuCat = products.filter(product => product.category === id)
-    console.log(menuCat);
-    productCenter.classList.add('animate.animated', 'animate__backInUp')
+    productCenter.classList.add('animate__animated', 'animate__backInUp')
     setTimeout(() => {
-      productCenter.classList.add('animate.animated', 'animate__backInUp')
+      productCenter.classList.remove('animate__animated', 'animate__backInUp')
     }, 1000) 
     displayProducts(menuCat, productCenter)
   })
