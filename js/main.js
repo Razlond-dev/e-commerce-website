@@ -4,7 +4,7 @@ const openBtn = document.querySelector('.hamburger')
 const closeBtn = document.querySelector('.close')
 
 const navLeft = nav.getBoundingClientRect().left
-
+console.log(navLeft);
 // open/close menu btn
 openBtn.addEventListener('click', () => {
   if (navLeft < 0) {
