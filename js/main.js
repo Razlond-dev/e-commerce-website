@@ -5,7 +5,7 @@ const closeBtn = document.querySelector('.close')
 
 const navLeft = nav.getBoundingClientRect().left
 
-
+// open/close menu btn
 openBtn.addEventListener('click', () => {
   if (navLeft < 0) {
     navigation.classList.add('show')
@@ -19,5 +19,17 @@ closeBtn.addEventListener('click', () => {
     navigation.classList.remove('show')
     nav.classList.remove('show')
     document.body.classList.remove('show')
+  }
+})
+
+// Fixed nav
+const navBar = document.querySelector('.navigation')
+const navHeight = navBar.getBoundingClientRect().height
+window.addEventListener('scroll', ()=> {
+  const scrollHeight = window.pageYOffset
+  if(scrollHeight > navHeight) {
+    navBar.classList.add('fix-nav')
+  } else {
+    navBar.classList.remove('fix-nav')
   }
 })
