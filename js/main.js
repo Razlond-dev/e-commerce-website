@@ -33,3 +33,54 @@ window.addEventListener('scroll', ()=> {
     navBar.classList.remove('fix-nav')
   }
 })
+
+// popup
+
+const popup = document.querySelector('.popup')
+const closePopupBtn = document.querySelector('.popup-close')
+
+closePopupBtn.addEventListener('click', () => {
+  popup.classList.remove('show')
+})
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    popup.classList.add('show')
+  }, 6000)
+})
+
+// preloader 
+window.addEventListener('load', () => {
+  const loader = document.querySelector('.preloader')
+  setTimeout(() => {
+    loader.classList.add('hide')
+
+  }, 1000)
+})
+
+// smooth scroll
+
+const links = [...document.querySelectorAll('.scroll-link')]
+
+links.map(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault()
+
+    const id = e.target.getAttribute('href').slice(1)
+    const element = document.getElementById(id)
+    const fixNav = navBar.classList.contains('fix-nav')
+    let position = element.offsetTop - navHeight
+
+    if(!fixNav) {
+      position = position - navHeight
+    }
+    window.scrollTo({
+      top: position,
+      left: 0
+    })
+
+      navigation.classList.remove('show')
+      nav.classList.remove('show')
+      document.body.classList.remove('show')
+  })
+})

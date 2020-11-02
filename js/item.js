@@ -71,7 +71,19 @@ const filterArray = async type => {
   return products.filter(product => product.category === type)
 }
 
+const shopCenter = document.querySelector('.shop-center')
+const latestCenter = document.querySelector('.latest-center')
+const recentCenter = document.querySelector('.recent-center')
+
+
+
 window.addEventListener('DOMContentLoaded', async () => {
+  const products = await getProducts()
   const defaultProducts = await filterArray('trend')
+  const latestProducts = await filterArray('latest')
+  const recentProducts = await filterArray('recent')
   displayProducts(defaultProducts, productCenter)
+  displayProducts(latestProducts, latestCenter)
+  displayProducts(recentProducts, recentCenter)
+  displayProducts(products, shopCenter)
 })
