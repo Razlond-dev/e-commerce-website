@@ -41,7 +41,7 @@ if (slider3) {
     startAt: 0,
     perView: 3,
     rewin: false,
-    autoplay: 10000,
+    autoplay: 4000,
     animationDuration: 800,
     animationTimingFunc: 'linear',
     breakpoints: {

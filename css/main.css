@@ -93,9 +93,7 @@ img {
   background-color: var(--pink);
   text-align: center;
   color: white;
-
 }
-
 
 /* Navigation */
 
@@ -283,6 +281,15 @@ img {
   }
 }
 
+@media only screen and (orientation: landscape) and (max-height: 440px) {
+  .navigation {
+    padding: 0.6rem 0;
+  }
+  .logo img {
+    max-width: 100px;
+  }
+}
+
 /* Hero */
 
 .hero, .glide__hero, .banner {
@@ -396,7 +403,6 @@ img {
 .glide:hover .glide__arrow {
   visibility: visible;
   opacity: 1;
-
 }
 
 .glide__arrow--left {
@@ -533,6 +539,40 @@ img {
   }
   .banner img.special_03 {
     height: 33rem;
+  }
+}
+
+@media only screen and (max-height: 468px) and (orientation: landscape) {
+  .banner img {
+    position: absolute;
+    bottom: 0;
+  }
+  .banner img.special_01 {
+    width: 30rem;
+    right: 5%;
+  }
+  .banner img.special_02 {
+    width: 40rem;
+    right: 0%;
+  }
+  .banner img.special_03 {
+    width: 30rem;
+    right: 5%;
+  }
+}
+
+@media only screen and (max-height: 348px) and (orientation: landscape) {
+  .banner img.special_01 {
+    width: 25rem;
+    right: 5%;
+  }
+  .banner img.special_02 {
+    width: 35rem;
+    right: 0%;
+  }
+  .banner img.special_03 {
+    width: 25rem;
+    right: 5%;
   }
 }
 
@@ -719,7 +759,6 @@ span.dot::before {
 .section-title.active .primary-title {
   opacity: 1;
 }
-
 
 @media only screen and (max-width: 567px) {
   .title-container {
@@ -997,11 +1036,9 @@ span.dot::before {
   .item-1 {
     margin-bottom: 2rem;
   }
-  .item-2,
-  .item-3 {
+  .item-2, .item-3 {
     margin-bottom: 2rem;
   }
-  
 }
 
 .brands li img {
@@ -1060,8 +1097,7 @@ span.dot::before {
   line-height: 2.7rem;
 }
 
-.card-footer a button,
-.card-footer a button {
+.card-footer a button, .card-footer a button {
   display: inline-block;
   padding: 1.2rem 3.7rem;
   border: 1px solid var(--black);
@@ -1087,17 +1123,13 @@ span.dot::before {
   .card-footer h3 {
     font-size: 1.8rem;
   }
-
   .card-footer span {
     font-size: 1.2rem;
   }
-
   .card-footer p {
     font-size: 1.2rem;
   }
-
-  .card-footer a button,
-  .card-footer a button {
+  .card-footer a button, .card-footer a button {
     padding: 1rem 3rem;
   }
 }
@@ -1375,7 +1407,55 @@ span.dot::before {
   }
 }
 
+@media only screen and (max-height: 468px) and (orientation: landscape) {
+  .popup {
+    overflow-y: scroll;
+  }
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    padding: 1.6em;
+    display: table;
+    overflow: hidden;
+    background-color: white;
+  }
+}
+
+@media only screen and (max-height: 320px) and (orientation: landscape) {
+  .popup-left {
+    height: 80%;
+  }
+  .popup-right {
+    height: 80%;
+    padding: 1rem 2rem;
+  }
+  .popup-img img {
+    width: 50%;
+    height: 30%;
+  }
+  .right-content h1 {
+    font-size: 2rem;
+  }
+  .right-content p {
+    font-size: 1.2rem;
+  }
+  .popup-input {
+    padding: 1.2rem 0;
+    margin-bottom: 1.2rem;
+  }
+  .right-content a:link, .right-content a:visited {
+    padding: 1.2rem 3rem;
+    border-radius: 3rem;
+  }
+}
+
 /* Footer */
+
 .footer {
   background-color: var(--black);
   padding: 6rem 1rem;
@@ -1392,8 +1472,7 @@ span.dot::before {
   color: white;
 }
 
-.footer-center a:link,
-.footer-center a:visited {
+.footer-center a:link, .footer-center a:visited {
   display: block;
   color: var(--greySec);
   font-size: 1.4rem;
