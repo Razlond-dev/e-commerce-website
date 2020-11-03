@@ -543,6 +543,11 @@ img {
 }
 
 @media only screen and (max-height: 468px) and (orientation: landscape) {
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
   .banner img {
     position: absolute;
     bottom: 0;
@@ -562,6 +567,10 @@ img {
 }
 
 @media only screen and (max-height: 348px) and (orientation: landscape) {
+  .banner img {
+    position: absolute;
+    bottom: 0;
+  }
   .banner img.special_01 {
     width: 25rem;
     right: 5%;
