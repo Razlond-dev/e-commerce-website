@@ -542,12 +542,21 @@ img {
   }
 }
 
-@media only screen and (max-height: 468px) and (orientation: landscape) {
-  .banner-content {
-    position: absolute;
-    top: 50%;
-    transform: translate(50%, -50%);
+@media only screen and (max-height: 800px) and (orientation: landscape) {
+  .hero, .glide__hero, .banner {
+    height: 700px;
   }
+  .banner img {
+    position: absolute;
+    bottom: 0;
+  }
+  .banner img.special_02 {
+    width: 60rem;
+    right: 0%;
+  }
+}
+
+@media only screen and (max-height: 468px) and (orientation: landscape) {
   .banner img {
     position: absolute;
     bottom: 0;
@@ -557,7 +566,7 @@ img {
     right: 5%;
   }
   .banner img.special_02 {
-    width: 40rem;
+    width: 50rem;
     right: 0%;
   }
   .banner img.special_03 {
@@ -567,10 +576,6 @@ img {
 }
 
 @media only screen and (max-height: 348px) and (orientation: landscape) {
-  .banner img {
-    position: absolute;
-    bottom: 0;
-  }
   .banner img.special_01 {
     width: 25rem;
     right: 5%;
