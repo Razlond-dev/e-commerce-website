@@ -5,7 +5,7 @@
   --grey-alt: #d1e2e9;
   --yellow: #ffd800;
   --green: #59b210;
-  --pink: rgb(172, 87, 127);
+  --pink: rgb(223, 30, 181);
 }
 
 *, *::before, *::after {
@@ -375,6 +375,7 @@ img {
   position: absolute;
   top: 50%;
   background-color: #555;
+  color: var(--black);
   border: 1px splid var(--black);
   outline: none;
   padding: 1.3rem 1.5rem;
@@ -387,13 +388,15 @@ img {
   transition: all 0.3s ease;
 }
 
-.glide__arrow {
-  color: var(--black);
+.glide__arrow:hover {
+  background-color: white;
+  color: #555;
 }
 
 .glide:hover .glide__arrow {
   visibility: visible;
   opacity: 1;
+
 }
 
 .glide__arrow--left {
@@ -717,6 +720,7 @@ span.dot::before {
   opacity: 1;
 }
 
+
 @media only screen and (max-width: 567px) {
   .title-container {
     flex-direction: column;
@@ -988,35 +992,16 @@ span.dot::before {
 
 @media only screen and (max-width: 600px) {
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(20, 4vw);
-    gap: 2rem;
+    display: block;
   }
   .item-1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 7;
+    margin-bottom: 2rem;
   }
-  .item-2 {
-    grid-column-start: 13;
-    grid-column-end: 7;
-    grid-row-start: 7;
-    grid-row-end: 11;
-  }
+  .item-2,
   .item-3 {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 11;
-    grid-row-end: 15;
+    margin-bottom: 2rem;
   }
-  .item-4 {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 15;
-    grid-row-end: 20;
-  }
+  
 }
 
 .brands li img {
@@ -1039,8 +1024,11 @@ span.dot::before {
 
 .blog-card {
   background-color: var(--grey-alt);
-  width: 95%;
   margin: 0 auto;
+}
+
+.card-header img {
+  width: 100%;
 }
 
 .blog-card:not(:last-child) {
@@ -1048,7 +1036,7 @@ span.dot::before {
 }
 
 .card-footer {
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 
 .card-footer h3 {
@@ -1170,6 +1158,11 @@ span.dot::before {
 
 .facility-box:hover i {
   transform: rotateY(180deg);
+}
+
+.section-title-dif {
+  display: inline-flex;
+  align-items: center;
 }
 
 @media only screen and (max-width: 998px) {

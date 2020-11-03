@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loader.classList.add('hide')
 
-  }, 1000)
+  }, 500)
 })
 
 // smooth scroll

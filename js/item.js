@@ -8,7 +8,7 @@ const getProducts = async ()=> {
 const displayProducts = (products, center) => {
   let display = products.map(({title, image, price}) => `<div class="product ">
   <div class="product-header">
-    <img src="images/product1.png" alt="">
+    <img src="${image}" alt="">
   </div>
   <div class="product-footer">
     <h3>${title}</h3>
